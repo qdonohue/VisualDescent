@@ -1,13 +1,19 @@
 
 function init() {
     var canvas = document.getElementById("mainGraph");
-    var context = canvas.getContext('2d');
+    canvas.setAttribute('width', '1000');
+    canvas.setAttribute('height', '600');
+    var ctx = canvas.getContext('2d');
     var offsetLeft = canvas.offsetLeft,
     offsetTop = canvas.offsetTop;
+    var rect = canvas.getBoundingClientRect();
+    oldLeft = rect.left;
+    oldTop = rect.top;
 
     canvas.addEventListener('click', function(event) { // When you click on a point, add point there
-        var x = event.pageX - offsetLeft,
-        y = event.pageY - offsetTop;
+        var rect = canvas.getBoundingClientRect();
+        var x = event.clientX - rect.left;
+        var y = event.clientY - rect.top;
 
         var point = {}
         point.x = x;
@@ -21,14 +27,4 @@ function init() {
         plottedPoints = [];
         updateGraph();
     });
-}
-
-function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
-    console.log("Canvas bounding box: ");
-    console.log(rect);
-    return {
-      x: evt.clientX - rect.left,
-      y: evt.clientY - rect.top
-    };
 }

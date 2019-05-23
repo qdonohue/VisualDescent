@@ -1,5 +1,5 @@
 
-const POINT_RADIUS = 10;
+const POINT_RADIUS = 5;
 
 function updateGraph() { // redraw everything
     var canvas = document.getElementById('mainGraph');

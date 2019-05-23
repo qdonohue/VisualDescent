@@ -16,7 +16,9 @@
 }
 
 #mainGraph {
-    flex: 1 1 90vh;
+    flex: 0 0 auto;
+    width: 1000px;
+    height: 600px;
     outline: black solid 2px;
 }
 
