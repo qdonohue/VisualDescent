@@ -17,11 +17,34 @@
                     <div class="controls">
                         <button id="reset" type="button">Reset Graph</button>
                         <button id="undo" type="button">Undo</button>
-
                     </div>
                 </div>
-                <canvas id="mainGraph">
-                </canvas>
+                <hr>
+                <div class="mainPortion">
+                    <div class="sideBar">
+                        <div class="sideTitle">Starting Values</div>
+                        <br>
+                        <div class="input">
+                            <div class="inputTitle">Alpha:</div>
+                            <input id="startingAlpha" class="inputValue" value=".05">
+                        </div>
+                    </div>
+                    <canvas id="mainGraph">
+                    </canvas>
+                    <div class="sideBar">
+                        <div class="sideTitle">Current Values</div>
+                        <br>
+                        <div class="input">
+                            <div class="inputTitle">Alpha:</div>
+                            <div class="inputValue" id="currentAlpha">.05</div>
+                        </div>
+                        <br>
+                        <div class="input">
+                            <div class="inputTitle">Current Loss:</div>
+                            <div class="inputValue" id="currentLoss">TO DO</div>
+                        </div>
+                    </div>
+                </div>
         </div>
         <script src="Scripts/jquery-3.4.1.min.js"></script>
         <script src="Scripts/math.min.js"></script>
