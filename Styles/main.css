@@ -5,28 +5,39 @@
     align-items: center;
 }
 
-.Controls {
+.upperBar {
     flex: 0 1 10vh;
     width: 100%;
     background-color: blanchedalmond;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid gray;
+    padding: 1px;
 }
 
 #mainGraph {
     flex: 0 0 auto;
-    width: 1000px;
+    width: 800px;
     height: 600px;
     outline: black solid 2px;
 }
 
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 #reset {
     background-color: red;
 }
+#undo {
+    background-color: aquamarine;
+}
 
 .header {
-    font-size: 26px;
+    font-size: 9vh;
     font-style: italic;
 }

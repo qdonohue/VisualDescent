@@ -1,14 +1,7 @@
 
 function init() {
-    var canvas = document.getElementById("mainGraph");
-    canvas.setAttribute('width', '1000');
+    canvas.setAttribute('width', '800');
     canvas.setAttribute('height', '600');
-    var ctx = canvas.getContext('2d');
-    var offsetLeft = canvas.offsetLeft,
-    offsetTop = canvas.offsetTop;
-    var rect = canvas.getBoundingClientRect();
-    oldLeft = rect.left;
-    oldTop = rect.top;
 
     canvas.addEventListener('click', function(event) { // When you click on a point, add point there
         var rect = canvas.getBoundingClientRect();
@@ -23,8 +16,19 @@ function init() {
         updateGraph();
     });
 
+    for (var i = 0; i < GRAPH_WIDTH; i++) {
+        var cur = {};
+        cur.x = i;
+        cur.y = 300; // hopefully flat line across...
+        curLine.push(cur);
+    }
+
     $("#reset").click(function() {
         plottedPoints = [];
-        updateGraph();
+        clearGraph();
+    });
+
+    $('#undo').click(function() {
+        undoGraph();
     });
 }

@@ -12,14 +12,19 @@
 	</head>
 	<body onload="init()">
         <div id="master">
-                <div class="Controls">
+                <div class="upperBar">
                     <div class="header">Visual Descent</div>
-                    <button id="reset" type="button">Reset Graph</button>
+                    <div class="controls">
+                        <button id="reset" type="button">Reset Graph</button>
+                        <button id="undo" type="button">Undo</button>
+
+                    </div>
                 </div>
                 <canvas id="mainGraph">
                 </canvas>
         </div>
         <script src="Scripts/jquery-3.4.1.min.js"></script>
+        <script src="Scripts/math.min.js"></script>
         <script src="Scripts/graphHandler.js"></script>
         <script src="Scripts/listeners.js"></script>
         <script src="Scripts/main.js"></script>
