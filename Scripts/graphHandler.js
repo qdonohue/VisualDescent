@@ -51,6 +51,7 @@ function undoGraph() {
     ctx.restore();
 }
 
+
 function computeFittedLine(weights) {
     var newline = [];
 
