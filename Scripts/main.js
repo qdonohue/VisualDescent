@@ -8,6 +8,8 @@ var curLine = [];
 // ML specific settings to play with
 var ALPHA = .05; // obvious
 var RESTART_DESCENT = false;
+var VECTOR_LENGTH = 15;
+var CUTOFF = 1;
 
 
 var canvas = document.getElementById('mainGraph');

@@ -50,3 +50,18 @@ function undoGraph() {
     // save old state
     ctx.restore();
 }
+
+function computeFittedLine(weights) {
+    var newline = [];
+
+    for (var i = 0; i < GRAPH_WIDTH; i += 10) {
+        var cur = {};
+        cur.x = i;
+        cur.y = runNetTanh(i, weights.w1, weights.w2, weights.b);
+        newline.push(cur);
+    }
+
+    curLine = newline;
+
+    updateGraph();
+}
